@@ -52,9 +52,9 @@ function Contact() {
 
             <div>
               <p className="text-xs tracking-[0.4em] text-gold mb-3">WHATSAPP</p>
-              <a href="https://wa.me/21626769962" className="flex items-center gap-3 p-3 gold-border hover:bg-card transition-colors group">
+              <a href="https://wa.me/393396309178" className="flex items-center gap-3 p-3 gold-border hover:bg-card transition-colors group">
                 <MessageCircle size={16} className="text-gold" />
-                <p className="text-sm group-hover:text-gold transition-colors">+216 26 76 99 62</p>
+                <p className="text-sm group-hover:text-gold transition-colors">+39 339 630 9178</p>
               </a>
             </div>
           </div>

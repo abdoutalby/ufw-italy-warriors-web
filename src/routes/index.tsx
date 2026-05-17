@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Calendar, MapPin, Shield, Flame, Trophy, Globe, Users } from "lucide-react";
 import hero from "@/assets/hero-fighter.jpg";
-import president from "@/assets/president.jpg";
+import leonardo from "@/assets/leonardo.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -105,7 +105,7 @@ function Home() {
           <div className="relative">
             <div className="absolute -inset-4 gradient-gold-bg opacity-20 blur-2xl" />
             <img
-              src={president}
+              src={leonardo}
               alt="Leonardo Marinelli, President of UFW Italy"
               className="relative w-full max-w-md mx-auto object-cover gold-border shadow-elegant"
               width={800}

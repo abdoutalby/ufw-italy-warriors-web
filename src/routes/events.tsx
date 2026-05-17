@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { Calendar, MapPin, Users } from "lucide-react";
+import campImg from "@/assets/italia_camp_soon.jpeg";
 
 export const Route = createFileRoute("/events")({
   head: () => ({
@@ -50,29 +51,49 @@ function Events() {
           {events.map((e) => (
             <article
               key={e.title}
-              className={`group grid md:grid-cols-[1fr_2fr] gap-8 p-8 md:p-12 gold-border transition-all hover:shadow-gold ${e.featured ? "bg-card" : ""}`}
+              className={`group gold-border transition-all hover:shadow-gold overflow-hidden ${e.featured ? "bg-card" : ""}`}
             >
-              <div className="border-r border-border pr-8">
-                <p className="text-[10px] tracking-[0.3em] text-gold mb-4">{e.tag}</p>
-                <div className="font-display text-5xl md:text-6xl gradient-gold-text leading-none">
-                  {e.date.split(" ")[0] === "Coming" ? "TBA" : e.date.split(",")[0].split(" ")[1]}
+              {/* Camp image banner for coming-soon events */}
+              {e.date === "Coming Soon" && (
+                <div className="relative h-48 md:h-56 overflow-hidden">
+                  <img
+                    src={campImg}
+                    alt="UFW Italy International Camp"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent" />
+                  <span className="absolute top-4 left-4 text-[10px] tracking-[0.3em] text-gold bg-background/70 px-3 py-1 backdrop-blur-sm">
+                    {e.tag}
+                  </span>
                 </div>
-                <div className="font-display text-sm tracking-[0.3em] text-foreground mt-2">
-                  {e.date.split(" ")[0] === "Coming" ? "COMING SOON" : `${e.date.split(" ")[0].toUpperCase()} ${e.date.split(",")[1]?.trim() || ""}`}
+              )}
+
+              <div className={`grid md:grid-cols-[1fr_2fr] gap-8 p-8 md:p-12`}>
+                <div className="border-r border-border pr-8">
+                  {e.date !== "Coming Soon" && (
+                    <p className="text-[10px] tracking-[0.3em] text-gold mb-4">{e.tag}</p>
+                  )}
+                  <div className="font-display text-5xl md:text-6xl gradient-gold-text leading-none">
+                    {e.date.split(" ")[0] === "Coming" ? "TBA" : e.date.split(",")[0].split(" ")[1]}
+                  </div>
+                  <div className="font-display text-sm tracking-[0.3em] text-foreground mt-2">
+                    {e.date.split(" ")[0] === "Coming" ? "COMING SOON" : `${e.date.split(" ")[0].toUpperCase()} ${e.date.split(",")[1]?.trim() || ""}`}
+                  </div>
+                  <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
+                    <MapPin size={14} className="text-gold" /> {e.place}
+                  </div>
                 </div>
-                <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
-                  <MapPin size={14} className="text-gold" /> {e.place}
-                </div>
-              </div>
-              <div>
-                <h2 className="font-display text-3xl md:text-4xl uppercase tracking-wider mb-4 group-hover:text-gold transition-colors">
-                  {e.title}
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-6">{e.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {["Kickboxing", "K1", "International Fighters", "Special Guests"].map((t) => (
-                    <span key={t} className="px-3 py-1 text-[10px] tracking-[0.2em] gold-border text-gold">{t}</span>
-                  ))}
+                <div>
+                  <h2 className="font-display text-3xl md:text-4xl uppercase tracking-wider mb-4 group-hover:text-gold transition-colors">
+                    {e.title}
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-6">{e.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Kickboxing", "K1", "International Fighters", "Special Guests"].map((t) => (
+                      <span key={t} className="px-3 py-1 text-[10px] tracking-[0.2em] gold-border text-gold">{t}</span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </article>

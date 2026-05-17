@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
-import { Award, BadgeCheck, FileText, ShieldCheck } from "lucide-react";
+import { Award, BadgeCheck, ShieldCheck } from "lucide-react";
+import certificateImg from "@/assets/certificat.jpeg";
 
 export const Route = createFileRoute("/certifications")({
   head: () => ({
@@ -49,29 +50,15 @@ function Certifications() {
             </ul>
           </div>
 
-          {/* Certificate placeholder */}
+          {/* Certificate image */}
           <div className="relative">
             <div className="absolute -inset-3 gradient-gold-bg opacity-20 blur-2xl" />
-            <div className="relative aspect-[3/4] gold-border bg-card p-10 flex flex-col items-center justify-center text-center shadow-elegant">
-              <div className="w-20 h-20 rounded-full gradient-gold-bg grid place-items-center mb-6">
-                <Award size={36} className="text-primary-foreground" />
-              </div>
-              <p className="text-[10px] tracking-[0.4em] text-gold mb-3">OFFICIAL CERTIFICATE</p>
-              <h3 className="font-display text-2xl uppercase tracking-wider mb-2">
-                Franchise Attestation
-              </h3>
-              <p className="font-display text-sm tracking-[0.3em] gradient-gold-text mb-6">
-                UFW INTERNATIONAL × UFW ITALY
-              </p>
-              <div className="my-6 w-16 h-px gradient-gold-bg" />
-              <p className="text-xs text-muted-foreground max-w-xs">
-                Official franchise certificate document. The signed attestation will be displayed
-                here.
-              </p>
-              <div className="mt-8 inline-flex items-center gap-2 text-xs text-gold tracking-[0.3em]">
-                <FileText size={14} /> CERTIFICATE PDF — COMING SOON
-              </div>
-            </div>
+            <img
+              src={certificateImg}
+              alt="UFW Italy Official Franchise Certificate"
+              className="relative w-full gold-border shadow-elegant"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>

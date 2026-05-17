@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Youtube } from "lucide-react";
-import logo from "@/assets/ufw-logo.png";
+import logo from "@/assets/ufw_logo.png";
 
 export function SiteFooter() {
   return (
@@ -45,7 +45,7 @@ export function SiteFooter() {
           </div>
           <p className="mt-6 text-xs text-muted-foreground">
             contact@ufw-world.com<br />
-            WhatsApp: +216 26 76 99 62
+            WhatsApp: +39 339 630 9178
           </p>
         </div>
       </div>

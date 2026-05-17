@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
-import president from "@/assets/president.jpg";
+import leonardo from "@/assets/leonardo.jpeg";
 import { Check } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
@@ -64,7 +64,7 @@ function About() {
 
       <section className="py-24 border-b border-border bg-card">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <img src={president} alt="Leonardo Marinelli" className="w-full max-w-md mx-auto gold-border shadow-elegant" width={800} height={1000} loading="lazy" />
+          <img src={leonardo} alt="Leonardo Marinelli" className="w-full max-w-md mx-auto gold-border shadow-elegant" width={800} height={1000} loading="lazy" />
           <div>
             <p className="text-xs tracking-[0.4em] text-gold mb-4">PRESIDENT</p>
             <h2 className="font-display text-4xl md:text-5xl uppercase tracking-wider mb-4">
