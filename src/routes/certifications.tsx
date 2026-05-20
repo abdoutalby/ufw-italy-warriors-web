@@ -73,6 +73,13 @@ function Certifications() {
             All UFW ITALY events, partnerships and athletic projects operate under the standards
             and supervision of the UFW INTERNATIONAL organization.
           </p>
+          <a
+            href={certificateImg}
+            download="UFW-Italy-Certificate.jpeg"
+            className="mt-10 inline-flex items-center justify-center px-10 py-4 gradient-gold-bg text-primary-foreground font-display tracking-[0.2em] text-sm shadow-gold hover:scale-[1.02] transition-transform"
+          >
+            DOWNLOAD CERTIFICATE
+          </a>
         </div>
       </section>
     </>

@@ -31,6 +31,10 @@ export function SiteFooter() {
             <li><Link to="/events" className="hover:text-gold">Events</Link></li>
             <li><Link to="/partners" className="hover:text-gold">Partners & Sponsors</Link></li>
             <li><Link to="/certifications" className="hover:text-gold">Certifications</Link></li>
+            <li><Link to="/register" className="hover:text-gold">Register as a Fighter</Link></li>
+            <li><Link to="/privacy" className="hover:text-gold">Privacy Policy</Link></li>
+            <li><Link to="/legal" className="hover:text-gold">Legal Notice</Link></li>
+            <li><Link to="/terms" className="hover:text-gold">Terms & Conditions</Link></li>
             <li><Link to="/contact" className="hover:text-gold">Contact</Link></li>
           </ul>
         </div>

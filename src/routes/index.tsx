@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Calendar, MapPin, Shield, Flame, Trophy, Globe, Users } from "lucide-react";
-import hero from "@/assets/hero-fighter.jpg";
+import { ArrowRight, Calendar, MapPin, Shield, ShieldCheck, Flame, Trophy, Globe, Users, Play, Star, MessageCircle, Handshake, Ticket, Briefcase, Download, MessageSquare, Send } from "lucide-react";
+import hero from "@/assets/hero.jpeg";
 import leonardo from "@/assets/leonardo.jpeg";
 
 export const Route = createFileRoute("/")({
@@ -187,6 +187,237 @@ function Home() {
         </div>
       </section>
 
+      {/* ACTION GRID */}
+      <section className="py-24 border-b border-border">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-14">
+            <p className="text-xs tracking-[0.4em] text-gold mb-3">GET INVOLVED</p>
+            <h2 className="font-display text-4xl md:text-5xl uppercase tracking-wider">
+              <span className="gradient-gold-text">Join the Movement</span>
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            {/* FIGHTERS */}
+            <div className="group p-8 gold-border bg-card hover:shadow-gold transition-all flex flex-col">
+              <Users className="text-gold mb-5" size={32} />
+              <h3 className="font-display text-lg uppercase tracking-wider mb-3 group-hover:text-gold transition-colors">FIGHTERS</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+                Discover the warriors behind UFW Italy. Our fighters represent discipline, courage, respect and the true spirit of combat sports. Each athlete carries a story, a mission and the ambition to rise on the international stage.
+              </p>
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 text-gold font-display tracking-[0.15em] text-xs hover:gap-3 transition-all"
+              >
+                VIEW FIGHTERS <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            {/* SPONSORS */}
+            <div className="group p-8 gold-border bg-card hover:shadow-gold transition-all flex flex-col">
+              <Star className="text-gold mb-5" size={32} />
+              <h3 className="font-display text-lg uppercase tracking-wider mb-3 group-hover:text-gold transition-colors">SPONSORS</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+                Become part of a growing international combat sports project. UFW Italy offers sponsors strong visibility, professional branding opportunities and access to a passionate sports audience across Italy and internationally.
+              </p>
+              <Link
+                to="/partners"
+                className="inline-flex items-center gap-2 text-gold font-display tracking-[0.15em] text-xs hover:gap-3 transition-all"
+              >
+                BECOME A SPONSOR <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            {/* CONTACT US */}
+            <div className="group p-8 gold-border bg-card hover:shadow-gold transition-all flex flex-col">
+              <MessageCircle className="text-gold mb-5" size={32} />
+              <h3 className="font-display text-lg uppercase tracking-wider mb-3 group-hover:text-gold transition-colors">CONTACT US</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+                For partnerships, events, sponsorship, fighter registration or international collaboration, contact the official UFW Italy team.
+              </p>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 text-gold font-display tracking-[0.15em] text-xs hover:gap-3 transition-all"
+              >
+                CONTACT US <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            {/* WATCH EVENTS */}
+            <div className="group p-8 gold-border bg-card hover:shadow-gold transition-all flex flex-col">
+              <Play className="text-gold mb-5" size={32} />
+              <h3 className="font-display text-lg uppercase tracking-wider mb-3 group-hover:text-gold transition-colors">WATCH EVENTS</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+                Experience the energy of UFW events: elite fighters, international guests, powerful emotions and unforgettable fight nights.
+              </p>
+              <Link
+                to="/events"
+                className="inline-flex items-center gap-2 text-gold font-display tracking-[0.15em] text-xs hover:gap-3 transition-all"
+              >
+                WATCH EVENTS <ArrowRight size={14} />
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ACTION GRID 2 */}
+      <section className="py-24 border-b border-border bg-card">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-14">
+            <p className="text-xs tracking-[0.4em] text-gold mb-3">QUICK ACCESS</p>
+            <h2 className="font-display text-4xl md:text-5xl uppercase tracking-wider">
+              <span className="gradient-gold-text">Official Actions</span>
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="group p-8 gold-border bg-card hover:shadow-gold transition-all flex flex-col">
+              <Calendar className="text-gold mb-5" size={32} />
+              <h3 className="font-display text-lg uppercase tracking-wider mb-3 group-hover:text-gold transition-colors">EVENT DETAILS</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+                Get full information about upcoming UFW Italy events, including date, location, fight card, program and participation details.
+              </p>
+              <Link
+                to="/events"
+                className="inline-flex items-center gap-2 text-gold font-display tracking-[0.15em] text-xs hover:gap-3 transition-all"
+              >
+                EVENT DETAILS <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            <div className="group p-8 gold-border bg-card hover:shadow-gold transition-all flex flex-col">
+              <Handshake className="text-gold mb-5" size={32} />
+              <h3 className="font-display text-lg uppercase tracking-wider mb-3 group-hover:text-gold transition-colors">REGISTER AS FIGHTER</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+                Are you a fighter, coach or team representative? Apply now to participate in upcoming UFW Italy events and international fight opportunities.
+              </p>
+              <Link
+                to="/register"
+                className="inline-flex items-center gap-2 text-gold font-display tracking-[0.15em] text-xs hover:gap-3 transition-all"
+              >
+                REGISTER AS FIGHTER <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            <div className="group p-8 gold-border bg-card hover:shadow-gold transition-all flex flex-col">
+              <Ticket className="text-gold mb-5" size={32} />
+              <h3 className="font-display text-lg uppercase tracking-wider mb-3 group-hover:text-gold transition-colors">BUY TICKETS</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+                Reserve your place and live the UFW experience from inside the arena. Limited seats available for each event.
+              </p>
+              <Link
+                to="/events"
+                className="inline-flex items-center gap-2 text-gold font-display tracking-[0.15em] text-xs hover:gap-3 transition-all"
+              >
+                BUY TICKETS <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            <div className="group p-8 gold-border bg-card hover:shadow-gold transition-all flex flex-col">
+              <Briefcase className="text-gold mb-5" size={32} />
+              <h3 className="font-display text-lg uppercase tracking-wider mb-3 group-hover:text-gold transition-colors">PARTNERSHIP REQUEST</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+                UFW Italy welcomes serious partners, sports organizations, gyms, media groups and international promoters interested in professional collaboration.
+              </p>
+              <Link
+                to="/partners"
+                className="inline-flex items-center gap-2 text-gold font-display tracking-[0.15em] text-xs hover:gap-3 transition-all"
+              >
+                PARTNERSHIP REQUEST <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            <div className="group p-8 gold-border bg-card hover:shadow-gold transition-all flex flex-col">
+              <ShieldCheck className="text-gold mb-5" size={32} />
+              <h3 className="font-display text-lg uppercase tracking-wider mb-3 group-hover:text-gold transition-colors">VIEW CERTIFICATE</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+                UFW Italy operates as an official international partner and representative under the UFW International vision and franchise development program.
+              </p>
+              <Link
+                to="/certifications"
+                className="inline-flex items-center gap-2 text-gold font-display tracking-[0.15em] text-xs hover:gap-3 transition-all"
+              >
+                VIEW CERTIFICATE <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            <div className="group p-8 gold-border bg-card hover:shadow-gold transition-all flex flex-col">
+              <Download className="text-gold mb-5" size={32} />
+              <h3 className="font-display text-lg uppercase tracking-wider mb-3 group-hover:text-gold transition-colors">DOWNLOAD CERTIFICATE</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+                Download the official franchise and partnership attestation confirming the official collaboration between UFW Italy and UFW International.
+              </p>
+              <Link
+                to="/certifications"
+                className="inline-flex items-center gap-2 text-gold font-display tracking-[0.15em] text-xs hover:gap-3 transition-all"
+              >
+                DOWNLOAD CERTIFICATE <ArrowRight size={14} />
+              </Link>
+            </div>
+
+            <div className="group p-8 gold-border bg-card hover:shadow-gold transition-all flex flex-col">
+              <MessageSquare className="text-gold mb-5" size={32} />
+              <h3 className="font-display text-lg uppercase tracking-wider mb-3 group-hover:text-gold transition-colors">CONTACT VIA WHATSAPP</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+                Need a fast response? Contact the UFW Italy team directly via WhatsApp for events, partnerships and official requests.
+              </p>
+              <a
+                href="https://wa.me/393396309178"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-gold font-display tracking-[0.15em] text-xs hover:gap-3 transition-all"
+              >
+                CONTACT VIA WHATSAPP <ArrowRight size={14} />
+              </a>
+            </div>
+
+            <div className="group p-8 gold-border bg-card hover:shadow-gold transition-all flex flex-col">
+              <Send className="text-gold mb-5" size={32} />
+              <h3 className="font-display text-lg uppercase tracking-wider mb-3 group-hover:text-gold transition-colors">SEND MESSAGE</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+                Send us your request and our team will contact you as soon as possible.
+              </p>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 text-gold font-display tracking-[0.15em] text-xs hover:gap-3 transition-all"
+              >
+                SEND MESSAGE <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 border-b border-border">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <p className="text-xs tracking-[0.4em] text-gold mb-3">LEGAL & POLICIES</p>
+          <h2 className="font-display text-4xl md:text-5xl uppercase tracking-wider mb-10">
+            <span className="gradient-gold-text">Official Website Documents</span>
+          </h2>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link
+              to="/privacy"
+              className="inline-flex items-center justify-center px-8 py-4 gold-border text-gold font-display tracking-[0.2em] text-xs hover:bg-gold hover:text-primary-foreground transition-colors"
+            >
+              PRIVACY POLICY
+            </Link>
+            <Link
+              to="/legal"
+              className="inline-flex items-center justify-center px-8 py-4 gold-border text-gold font-display tracking-[0.2em] text-xs hover:bg-gold hover:text-primary-foreground transition-colors"
+            >
+              LEGAL NOTICE
+            </Link>
+            <Link
+              to="/terms"
+              className="inline-flex items-center justify-center px-8 py-4 gold-border text-gold font-display tracking-[0.2em] text-xs hover:bg-gold hover:text-primary-foreground transition-colors"
+            >
+              TERMS & CONDITIONS
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 noise-texture opacity-50" />
@@ -198,12 +429,20 @@ function Home() {
             Partnerships, sponsorships, fighter representation — connect with the official Italian
             branch of UFW INTERNATIONAL.
           </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 px-10 py-4 gradient-gold-bg text-primary-foreground font-display tracking-[0.2em] text-sm shadow-gold hover:scale-[1.02] transition-transform"
-          >
-            BECOME A PARTNER <ArrowRight size={16} />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 px-10 py-4 gradient-gold-bg text-primary-foreground font-display tracking-[0.2em] text-sm shadow-gold hover:scale-[1.02] transition-transform"
+            >
+              BECOME A PARTNER <ArrowRight size={16} />
+            </Link>
+            <Link
+              to="/partners"
+              className="inline-flex items-center justify-center px-10 py-4 gold-border text-gold font-display tracking-[0.2em] text-sm hover:bg-gold hover:text-primary-foreground transition-colors"
+            >
+              PARTNERSHIP REQUEST
+            </Link>
+          </div>
         </div>
       </section>
     </>
