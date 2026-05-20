@@ -21,6 +21,7 @@ import { Route as EventsRouteImport } from './routes/events'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CertificationsRouteImport } from './routes/certifications'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as FightersRouteImport } from './routes/fighters'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TermsRoute = TermsRouteImport.update({
@@ -68,6 +69,11 @@ const EventsRoute = EventsRouteImport.update({
   path: '/events',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FightersRoute = FightersRouteImport.update({
+  id: '/fighters',
+  path: '/fighters',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -95,6 +101,7 @@ export interface FileRoutesByFullPath {
   '/certifications': typeof CertificationsRoute
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
+  '/fighters': typeof FightersRoute
   '/gallery': typeof GalleryRoute
   '/legal': typeof LegalRoute
   '/news': typeof NewsRoute
@@ -110,6 +117,7 @@ export interface FileRoutesByTo {
   '/certifications': typeof CertificationsRoute
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
+  '/fighters': typeof FightersRoute
   '/gallery': typeof GalleryRoute
   '/legal': typeof LegalRoute
   '/news': typeof NewsRoute
@@ -126,6 +134,7 @@ export interface FileRoutesById {
   '/certifications': typeof CertificationsRoute
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
+  '/fighters': typeof FightersRoute
   '/gallery': typeof GalleryRoute
   '/legal': typeof LegalRoute
   '/news': typeof NewsRoute
@@ -143,6 +152,7 @@ export interface FileRouteTypes {
     | '/certifications'
     | '/contact'
     | '/events'
+    | '/fighters'
     | '/gallery'
     | '/legal'
     | '/news'
@@ -158,6 +168,7 @@ export interface FileRouteTypes {
     | '/certifications'
     | '/contact'
     | '/events'
+    | '/fighters'
     | '/gallery'
     | '/legal'
     | '/news'
@@ -173,6 +184,7 @@ export interface FileRouteTypes {
     | '/certifications'
     | '/contact'
     | '/events'
+    | '/fighters'
     | '/gallery'
     | '/legal'
     | '/news'
@@ -189,6 +201,7 @@ export interface RootRouteChildren {
   CertificationsRoute: typeof CertificationsRoute
   ContactRoute: typeof ContactRoute
   EventsRoute: typeof EventsRoute
+  FightersRoute: typeof FightersRoute
   GalleryRoute: typeof GalleryRoute
   LegalRoute: typeof LegalRoute
   NewsRoute: typeof NewsRoute

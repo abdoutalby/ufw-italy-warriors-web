@@ -6,6 +6,7 @@ import logo from "@/assets/ufw_logo.png";
 const nav = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
+  { to: "/fighters", label: "Fighters" },
   { to: "/events", label: "Events" },
   { to: "/gallery", label: "Gallery" },
   { to: "/partners", label: "Partners" },

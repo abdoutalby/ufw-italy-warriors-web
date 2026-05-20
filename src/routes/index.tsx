@@ -206,7 +206,7 @@ function Home() {
                 Discover the warriors behind UFW Italy. Our fighters represent discipline, courage, respect and the true spirit of combat sports. Each athlete carries a story, a mission and the ambition to rise on the international stage.
               </p>
               <Link
-                to="/about"
+                to="/fighters"
                 className="inline-flex items-center gap-2 text-gold font-display tracking-[0.15em] text-xs hover:gap-3 transition-all"
               >
                 VIEW FIGHTERS <ArrowRight size={14} />

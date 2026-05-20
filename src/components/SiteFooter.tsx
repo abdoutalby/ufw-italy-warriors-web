@@ -28,6 +28,7 @@ export function SiteFooter() {
           <h4 className="text-xs tracking-[0.25em] text-gold mb-4">EXPLORE</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li><Link to="/about" className="hover:text-gold">About UFW Italy</Link></li>
+            <li><Link to="/fighters" className="hover:text-gold">Fighters</Link></li>
             <li><Link to="/events" className="hover:text-gold">Events</Link></li>
             <li><Link to="/partners" className="hover:text-gold">Partners & Sponsors</Link></li>
             <li><Link to="/certifications" className="hover:text-gold">Certifications</Link></li>
