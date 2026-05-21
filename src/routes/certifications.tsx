@@ -1,22 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { Award, BadgeCheck, ShieldCheck } from "lucide-react";
 import certificateImg from "@/assets/certificat.jpeg";
 
-export const Route = createFileRoute("/certifications")({
-  head: () => ({
-    meta: [
-      { title: "Official Certifications — UFW Italy" },
-      { name: "description", content: "UFW Italy is the officially recognized international partner and franchise representative of UFW INTERNATIONAL." },
-      { property: "og:title", content: "UFW Italy — Official Franchise Certification" },
-      { property: "og:description", content: "Recognized international franchise of UFW INTERNATIONAL." },
-    ],
-    links: [{ rel: "canonical", href: "/certifications" }],
-  }),
-  component: Certifications,
-});
-
-function Certifications() {
+export default function Certifications() {
   return (
     <>
       <PageHero eyebrow="OFFICIAL DOCUMENTS" title="Certifications" subtitle="UFW ITALY is the officially recognized international partner and franchise representative of UFW INTERNATIONAL." />

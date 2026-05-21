@@ -1,19 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { Handshake } from "lucide-react";
-
-export const Route = createFileRoute("/partners")({
-  head: () => ({
-    meta: [
-      { title: "Partners & Sponsors — UFW Italy" },
-      { name: "description", content: "UFW Italy collaborates with international organizations, sponsors and strategic partners for world-class combat sports events." },
-      { property: "og:title", content: "UFW Italy — Partners & Sponsors" },
-      { property: "og:description", content: "Our international partners and official sponsors." },
-    ],
-    links: [{ rel: "canonical", href: "/partners" }],
-  }),
-  component: Partners,
-});
 
 const categories = [
   "Sports Equipment",
@@ -26,7 +12,7 @@ const categories = [
   "Travel Partners",
 ];
 
-function Partners() {
+export default function Partners() {
   return (
     <>
       <PageHero eyebrow="OUR NETWORK" title="Partners & Sponsors" subtitle="UFW ITALY collaborates with international organizations, sponsors and strategic partners to develop world-class combat sports experiences." />

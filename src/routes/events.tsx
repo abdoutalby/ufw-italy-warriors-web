@@ -1,20 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { Calendar, MapPin, Users } from "lucide-react";
 import campImg from "@/assets/italia_camp_soon.jpeg";
-
-export const Route = createFileRoute("/events")({
-  head: () => ({
-    meta: [
-      { title: "International Events — UFW Italy" },
-      { name: "description", content: "UFW Italy international fight events, championships, training camps and seminars." },
-      { property: "og:title", content: "UFW Italy — International Events" },
-      { property: "og:description", content: "Discover our upcoming international combat sports events." },
-    ],
-    links: [{ rel: "canonical", href: "/events" }],
-  }),
-  component: Events,
-});
 
 const events = [
   {
@@ -41,7 +27,7 @@ const events = [
   },
 ];
 
-function Events() {
+export default function Events() {
   return (
     <>
       <PageHero eyebrow="UPCOMING" title="International Events" subtitle="Official international fight events, championships, training camps and professional combat experiences." />

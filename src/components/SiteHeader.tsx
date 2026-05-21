@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "@/components/Link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/ufw_logo.png";

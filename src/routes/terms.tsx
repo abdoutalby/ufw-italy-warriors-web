@@ -1,20 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 
-export const Route = createFileRoute("/terms")({
-  head: () => ({
-    meta: [
-      { title: "Terms & Conditions — UFW Italy" },
-      { name: "description", content: "Read the general terms and conditions related to website use, event information, registrations and official communications." },
-      { property: "og:title", content: "Terms & Conditions — UFW Italy" },
-      { property: "og:description", content: "Read the general terms and conditions related to website use, event information, registrations and official communications." },
-    ],
-    links: [{ rel: "canonical", href: "/terms" }],
-  }),
-  component: Terms,
-});
-
-function Terms() {
+export default function Terms() {
   return (
     <>
       <PageHero

@@ -1,20 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 
-export const Route = createFileRoute("/privacy")({
-  head: () => ({
-    meta: [
-      { title: "Privacy Policy — UFW Italy" },
-      { name: "description", content: "Learn how UFW Italy protects your personal information and respects your privacy when using our website and contact forms." },
-      { property: "og:title", content: "Privacy Policy — UFW Italy" },
-      { property: "og:description", content: "Learn how UFW Italy protects your personal information and respects your privacy when using our website and contact forms." },
-    ],
-    links: [{ rel: "canonical", href: "/privacy" }],
-  }),
-  component: Privacy,
-});
-
-function Privacy() {
+export default function Privacy() {
   return (
     <>
       <PageHero

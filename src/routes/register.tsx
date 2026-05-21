@@ -1,21 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
-import { Link } from "@tanstack/react-router";
+import { Link } from "@/components/Link";
 
-export const Route = createFileRoute("/register")({
-  head: () => ({
-    meta: [
-      { title: "Register as a Fighter — UFW Italy" },
-      { name: "description", content: "Apply as a fighter, coach or team representative for upcoming UFW Italy events and international fight opportunities." },
-      { property: "og:title", content: "Register as a Fighter — UFW Italy" },
-      { property: "og:description", content: "Join UFW Italy and apply for upcoming events, seminars and international fight opportunities." },
-    ],
-    links: [{ rel: "canonical", href: "/register" }],
-  }),
-  component: Register,
-});
-
-function Register() {
+export default function Register() {
   return (
     <>
       <PageHero

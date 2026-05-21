@@ -1,20 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@/components/Link";
 import { ArrowRight, Calendar, MapPin, Shield, ShieldCheck, Flame, Trophy, Globe, Users, Play, Star, MessageCircle, Handshake, Ticket, Briefcase, Download, MessageSquare, Send } from "lucide-react";
 import hero from "@/assets/hero.jpeg";
 import leonardo from "@/assets/leonardo.jpeg";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "UFW ITALY — The Road of Warriors" },
-      { name: "description", content: "Official Italian branch of UFW INTERNATIONAL. Kickboxing, K1, MMA, Muay Thai and Boxing — international fight events and professional combat experiences." },
-      { property: "og:title", content: "UFW ITALY — The Road of Warriors" },
-      { property: "og:description", content: "International combat sports organization. Championships, training camps and professional fight experiences." },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
-  component: Home,
-});
 
 const values = [
   { icon: Shield, label: "HONOR" },
@@ -30,7 +17,7 @@ const events = [
   { name: "World Combat Experience", place: "Italy", date: "Coming Soon", tag: "Elite Event" },
 ];
 
-function Home() {
+export default function Home() {
   return (
     <>
       {/* HERO */}

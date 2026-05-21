@@ -1,20 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 
-export const Route = createFileRoute("/legal")({
-  head: () => ({
-    meta: [
-      { title: "Legal Notice — UFW Italy" },
-      { name: "description", content: "Official legal information about UFW Italy, website ownership, brand representation and organizational communication." },
-      { property: "og:title", content: "Legal Notice — UFW Italy" },
-      { property: "og:description", content: "Official legal information about UFW Italy, website ownership, brand representation and organizational communication." },
-    ],
-    links: [{ rel: "canonical", href: "/legal" }],
-  }),
-  component: Legal,
-});
-
-function Legal() {
+export default function Legal() {
   return (
     <>
       <PageHero

@@ -1,19 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { ArrowRight, Newspaper } from "lucide-react";
-
-export const Route = createFileRoute("/news")({
-  head: () => ({
-    meta: [
-      { title: "News — UFW Italy" },
-      { name: "description", content: "Latest news, announcements and updates from UFW Italy and the international combat sports network." },
-      { property: "og:title", content: "UFW Italy — News" },
-      { property: "og:description", content: "Latest news and announcements." },
-    ],
-    links: [{ rel: "canonical", href: "/news" }],
-  }),
-  component: News,
-});
 
 const posts = [
   {
@@ -36,7 +22,7 @@ const posts = [
   },
 ];
 
-function News() {
+export default function News() {
   return (
     <>
       <PageHero eyebrow="LATEST" title="UFW News" subtitle="Announcements, event updates and official communications from UFW Italy." />

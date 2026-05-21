@@ -1,19 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { ShieldCheck, Users } from "lucide-react";
-
-export const Route = createFileRoute("/fighters")({
-  head: () => ({
-    meta: [
-      { title: "Fighters — UFW Italy" },
-      { name: "description", content: "Discover the official UFW Italy fighters, their stories and their international ambitions." },
-      { property: "og:title", content: "UFW Italy Fighters" },
-      { property: "og:description", content: "Meet the warriors representing courage, discipline and respect for UFW Italy." },
-    ],
-    links: [{ rel: "canonical", href: "/fighters" }],
-  }),
-  component: Fighters,
-});
 
 const featureList = [
   "International fighters representing UFW Italy",
@@ -23,7 +9,7 @@ const featureList = [
   "Access to fight camps, seminars and global events",
 ];
 
-function Fighters() {
+export default function Fighters() {
   return (
     <>
       <PageHero

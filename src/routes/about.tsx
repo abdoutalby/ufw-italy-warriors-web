@@ -1,20 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import leonardo from "@/assets/leonardo.jpeg";
 import { Check } from "lucide-react";
-
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About UFW Italy — Official Italian Branch of UFW International" },
-      { name: "description", content: "UFW ITALY is the official Italian branch of UFW INTERNATIONAL, led by President Leonardo Marinelli." },
-      { property: "og:title", content: "About UFW Italy" },
-      { property: "og:description", content: "Official Italian branch of UFW INTERNATIONAL." },
-    ],
-    links: [{ rel: "canonical", href: "/about" }],
-  }),
-  component: About,
-});
 
 const specialties = [
   "International combat sports events",
@@ -27,7 +13,7 @@ const specialties = [
   "Franchise and partnership development",
 ];
 
-function About() {
+export default function About() {
   return (
     <>
       <PageHero eyebrow="WHO WE ARE" title="About UFW Italy" subtitle="The official Italian branch of UFW INTERNATIONAL — building bridges between countries, athletes and organizations through sport, discipline and respect." />

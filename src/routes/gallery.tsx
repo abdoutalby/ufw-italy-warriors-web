@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import g1 from "@/assets/gallery-1.jpg";
 import g2 from "@/assets/gallery-2.jpg";
@@ -6,20 +5,6 @@ import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
 import g5 from "@/assets/gallery-5.jpg";
 import g6 from "@/assets/gallery-6.jpg";
-
-export const Route = createFileRoute("/gallery")({
-  head: () => ({
-    meta: [
-      { title: "Gallery — UFW Italy Experience" },
-      { name: "description", content: "Discover the best moments from UFW Italy international championships, fights, face offs and training camps." },
-      { property: "og:title", content: "UFW Italy — The Experience" },
-      { property: "og:description", content: "Photos from international events, fights and seminars." },
-      { property: "og:image", content: "/og-gallery.jpg" },
-    ],
-    links: [{ rel: "canonical", href: "/gallery" }],
-  }),
-  component: Gallery,
-});
 
 const items = [
   { src: g1, label: "Face Offs" },
@@ -32,7 +17,7 @@ const items = [
 
 const categories = ["Fighters", "Face Offs", "Championships", "Awards", "International Guests", "Training Camps", "Behind The Scenes"];
 
-function Gallery() {
+export default function Gallery() {
   return (
     <>
       <PageHero eyebrow="THE EXPERIENCE" title="UFW Gallery" subtitle="Explore the best moments from our international events, championships, seminars and fight nights." />
