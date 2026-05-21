@@ -1,4 +1,4 @@
-import{j as e}from"./jsx-runtime.D_zvdyIk.js";import{L as o}from"./Link.CcVq_r7d.js";import{l as i}from"./ufw_logo.DK4S-oOV.js";import{u as l}from"./LanguageContext.Lc5ExkGz.js";import{c as s}from"./createLucideIcon.hepfLwRi.js";import"./index.C5BVv2q5.js";/**
+import{j as e}from"./jsx-runtime.D_zvdyIk.js";import{L as o}from"./Link.CcVq_r7d.js";import{l as i}from"./ufw_logo.DK4S-oOV.js";import{u as l}from"./LanguageContext.DrNgiuTd.js";import{c as s}from"./createLucideIcon.hepfLwRi.js";import"./index.C5BVv2q5.js";/**
  * @license lucide-react v0.575.0 - ISC
  *
  * This source code is licensed under the ISC license.
